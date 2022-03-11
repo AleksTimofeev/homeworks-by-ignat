@@ -1,15 +1,38 @@
+
 .someClass {
 
 }
 .affairsWrapper {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  min-width: 320px;
+  max-width: 500px;
+  width: 100%;
 }
 .buttonsPriority {
   display: flex;
+  justify-content: flex-end;
+  padding: 0 0.3rem;
+}
+.buttonsPriority button {
+  margin-left: .5rem;
+  padding: 0 .5rem;
 }
 .affairsItem {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    ". . .";
+  border-radius: 5px;
+  padding: .6rem;
+  margin: .3rem;
+}
+.highPriority {
+  background: #e92d2d;
+}
+.middlePriority {
+  background: coral;
+}
+.lowPriority {
+  background: bisque;
 }

@@ -7,9 +7,7 @@ export type AffairType = {
   _id: number, name: string, priority: string
 } // need to fix any
 export type FilterType = 'all' | AffairPriorityType
-export type AffairItem = {
-  _id: number, name: string, priority: string
-}
+
 
 // constants
 const defaultAffairs: AffairType[] = [ // need to fix any

@@ -34,14 +34,13 @@ function Affairs(props: AffairsPropsType) {
 
   return (
     <div className={styles.affairsWrapper}>
-
-      {mappedAffairs}
       <div className={styles.buttonsPriority}>
         <button onClick={setAll}>All</button>
         <button onClick={setHigh}>High</button>
         <button onClick={setMiddle}>Middle</button>
         <button onClick={setLow}>Low</button>
       </div>
+      {mappedAffairs}
     </div>
   )
 }

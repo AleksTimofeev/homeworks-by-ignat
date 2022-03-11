@@ -13,8 +13,10 @@ function Affair(props: AffairPropsType) {
     props.deleteAffairCallback(props.affair._id)
   }// need to fix
 
+
+
   return (
-    <div className={styles.affairsItem}>
+    <div className={styles.affairsItem + ' ' + styles[`${props.affair.priority}Priority`]}>
       <span>{props.affair.name}</span>
       <span>{props.affair.priority}</span>
       <button onClick={deleteCallback}>X</button>
