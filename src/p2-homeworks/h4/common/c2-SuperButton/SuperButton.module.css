@@ -1,7 +1,12 @@
 .default {
 
 }
-
 .red {
-    background: red;
+
+}
+.red:hover {
+  background: red;
+}
+.red:active {
+
 }

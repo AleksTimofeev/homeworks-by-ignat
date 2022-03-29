@@ -30,11 +30,12 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // spanClassName={s.testSpanError}
+                    classesInput={'green'}
+
                 />
 
                 <SuperInputText
-                    className={s.blue} // проверьте, рабоет ли смешивание классов
+                    classesInput={'blue'} // проверьте, рабоет ли смешивание классов
                 />
 
                 {/*----------------------------------------------------*/}

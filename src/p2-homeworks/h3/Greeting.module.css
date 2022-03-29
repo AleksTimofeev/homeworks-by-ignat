@@ -1,7 +1,33 @@
 .someClass {
 
 }
-
 .error {
     border: 1px solid red;
+}
+.hw3Container {
+
+}
+.hw3Container ul {
+  min-width: 320px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.greetingWrapper {
+  min-width: 320px;
+  max-width: 500px;
+}
+.user {
+  display: flex;
+  justify-content: space-between;
+  margin: .3rem 1rem;
+  padding: 0.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.user:hover {
+  background: #ececec;
+  transition: .3s;
 }

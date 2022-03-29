@@ -1,12 +1,14 @@
 import React from 'react'
-import s from './Greeting.module.css'
 import {ErrorType} from "./GreetingContainer";
+import SuperInputText from "../h4/common/c1-SuperInputText/SuperInputText";
+import styles from './Greeting.module.css'
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 type GreetingPropsType = {
   name: string
-  setNameCallback: (e: React.ChangeEvent<HTMLInputElement>) => void
+  setNameCallback: (value: string) => void
   addUser: () => void
-  error: ErrorType // need to fix any
+  error: ErrorType
   totalUsers: number
 }
 
@@ -14,19 +16,17 @@ type GreetingPropsType = {
 const Greeting: React.FC<GreetingPropsType> = (
   {name, setNameCallback, addUser, error, totalUsers}
 ) => {
-  const inputClass = error ? s.error : '' // need to fix with (?:)
 
   return (
-    <div>
-      <input value={name}
-             onChange={setNameCallback}
-             onKeyPress={(e) => {
-               if (e.code === 'Enter') {
-                 addUser()
-               }
-             }}
-             className={inputClass}/>
-      {error ? <span>{error}</span> : <button onClick={addUser}>add</button>}
+    <div className={styles.greetingWrapper}>
+      <SuperInputText
+        value={name}
+        onChangeText={setNameCallback}
+        onEnter={addUser}
+        error={error}
+      />
+      {/*{error ? <span>{error}</span> : <button onClick={addUser}>add</button>}*/}
+      {error ? <span>{error}</span> : <SuperButton onClick={addUser}>add</SuperButton>}
       <span>{totalUsers}</span>
     </div>
   )

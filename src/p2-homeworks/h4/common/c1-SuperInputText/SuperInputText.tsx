@@ -9,8 +9,10 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 type SuperInputTextPropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
     onChangeText?: (value: string) => void
     onEnter?: () => void
+    className?: string
     error?: string
     spanClassName?: string
+    classesInput?: 'green' | 'blue'
 }
 
 const SuperInputText: React.FC<SuperInputTextPropsType> = (
@@ -19,7 +21,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         onChange, onChangeText,
         onKeyPress, onEnter,
         error,
-        className, spanClassName,
+        className, spanClassName, classesInput,
 
         ...restProps// все остальные пропсы попадут в объект restProps
     }
@@ -39,10 +41,10 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     }
 
     const finalSpanClassName = `${s.error} ${spanClassName ? spanClassName : ''}`
-    const finalInputClassName = `${s.errorInput} ${className}` // need to fix with (?:) and s.superInput
+    const finalInputClassName = `${s.inputStyle} ${error ? s.errorInput : ''} ${classesInput ? s[classesInput] : ''}` // need to fix with (?:) and s.superInput
 
     return (
-        <>
+        <div className={s.wrapper}>
             <input
                 type={'text'}
                 onChange={onChangeCallback}
@@ -51,8 +53,9 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
 
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
+
             {error && <span className={finalSpanClassName}>{error}</span>}
-        </>
+        </div>
     )
 }
 
