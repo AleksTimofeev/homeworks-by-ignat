@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/homeworks-by-ignat/static/css/main.a1572a99.chunk.css",
+    "main.js": "/homeworks-by-ignat/static/js/main.c4c7d886.chunk.js",
+    "main.js.map": "/homeworks-by-ignat/static/js/main.c4c7d886.chunk.js.map",
+    "runtime-main.js": "/homeworks-by-ignat/static/js/runtime-main.e13e2a19.js",
+    "runtime-main.js.map": "/homeworks-by-ignat/static/js/runtime-main.e13e2a19.js.map",
+    "static/js/2.a06463af.chunk.js": "/homeworks-by-ignat/static/js/2.a06463af.chunk.js",
+    "static/js/2.a06463af.chunk.js.map": "/homeworks-by-ignat/static/js/2.a06463af.chunk.js.map",
+    "index.html": "/homeworks-by-ignat/index.html",
+    "precache-manifest.58889977d82f9dedc69db6b8cfd2ccb3.js": "/homeworks-by-ignat/precache-manifest.58889977d82f9dedc69db6b8cfd2ccb3.js",
+    "service-worker.js": "/homeworks-by-ignat/service-worker.js",
+    "static/css/main.a1572a99.chunk.css.map": "/homeworks-by-ignat/static/css/main.a1572a99.chunk.css.map",
+    "static/js/2.a06463af.chunk.js.LICENSE.txt": "/homeworks-by-ignat/static/js/2.a06463af.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e13e2a19.js",
+    "static/js/2.a06463af.chunk.js",
+    "static/css/main.a1572a99.chunk.css",
+    "static/js/main.c4c7d886.chunk.js"
+  ]
+}
