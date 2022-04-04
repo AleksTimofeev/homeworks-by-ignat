@@ -14,19 +14,16 @@ function Header() {
         className={({isActive}) => isActive ? styles.activeLink : ''}
         to={PATH.PRE_JUNIOR}>
         PreJunior
-        <span className={styles.borderLink}></span>
       </NavLink>
       <NavLink
         className={({isActive}) => isActive ? styles.activeLink : ''}
         to={PATH.JUNIOR}>
         Junior
-        <span className={styles.borderLink}></span>
       </NavLink>
       <NavLink
         className={({isActive}) => isActive ? styles.activeLink : ''}
         to={PATH.JUNIOR_PLUS}>
         Junior +
-        <span className={styles.borderLink}></span>
       </NavLink>
     </div>
     </div>

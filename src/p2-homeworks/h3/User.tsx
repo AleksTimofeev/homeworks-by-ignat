@@ -24,7 +24,10 @@ const User: React.FC<PropsType> = ({
     <li className={styles.user} onClick={userClickHandler}>
       <span title={`created ${dateOfCreation}`}>{name}</span>
       {/*<button onClick={()=>removeUserCallback(_id)}>delete</button>*/}
-      <SuperButton red={true} onClick={()=>removeUserCallback(_id)}>delete</SuperButton>
+      <SuperButton red={true} onClick={()=> {
+        alert('are you sure?')
+        removeUserCallback(_id)
+      }}>delete</SuperButton>
     </li>
   );
 };

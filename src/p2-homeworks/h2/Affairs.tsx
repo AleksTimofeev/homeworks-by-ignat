@@ -36,10 +36,10 @@ function Affairs(props: AffairsPropsType) {
   return (
     <div className={styles.affairsWrapper}>
       <div className={styles.buttonsPriority}>
-        <SuperButton onClick={setAll}>All</SuperButton>
-        <SuperButton onClick={setHigh}>High</SuperButton>
-        <SuperButton onClick={setMiddle}>Middle</SuperButton>
-        <SuperButton onClick={setLow}>Low</SuperButton>
+        <SuperButton className={styles.btn} onClick={setAll}>All</SuperButton>
+        <SuperButton className={styles.btn} onClick={setHigh}>High</SuperButton>
+        <SuperButton className={styles.btn} onClick={setMiddle}>Middle</SuperButton>
+        <SuperButton className={styles.btn} onClick={setLow}>Low</SuperButton>
       </div>
       {mappedAffairs}
     </div>

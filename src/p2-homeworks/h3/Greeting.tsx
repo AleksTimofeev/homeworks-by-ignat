@@ -24,9 +24,9 @@ const Greeting: React.FC<GreetingPropsType> = (
         onChangeText={setNameCallback}
         onEnter={addUser}
         error={error}
+        className={styles.input}
       />
-      {/*{error ? <span>{error}</span> : <button onClick={addUser}>add</button>}*/}
-      {error ? <span>{error}</span> : <SuperButton onClick={addUser}>add</SuperButton>}
+      {error ? <span>{error}</span> : <SuperButton className={styles.btn} onClick={addUser}>add</SuperButton>}
       <span>{totalUsers}</span>
     </div>
   )
