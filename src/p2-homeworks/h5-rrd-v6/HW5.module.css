@@ -1,6 +1,7 @@
 .container {
   width: 80%;
-  overflow: hidden;
+  box-shadow: 0 0 10px 5px #aeaeae;
+  padding: 0 20px;
 }
 
 .header {

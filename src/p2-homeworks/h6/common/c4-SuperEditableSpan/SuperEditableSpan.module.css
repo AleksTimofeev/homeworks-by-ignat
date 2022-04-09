@@ -1,0 +1,15 @@
+.editableSpan {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  background: #e8cbfc;
+  width: fit-content;
+  padding: 0.3rem 1rem;
+  color: black;
+  border-radius: 6px;
+}
+.editableSpan img {
+  height: 20px;
+  margin-right: 20px;
+}

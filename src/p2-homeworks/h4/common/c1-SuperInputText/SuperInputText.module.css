@@ -2,8 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: .3rem 1rem;
-  width: 100%;
+  /*padding: .3rem 1rem;*/
+  /*width: 100%;*/
 }
 
 .superInput {
@@ -51,7 +51,7 @@
 
 .error {
   position: absolute;
-  top: -20px;
-  right: 2.5rem;
+  font-size: 1.2em;
+  left: 2rem;
   color: red;
 }
