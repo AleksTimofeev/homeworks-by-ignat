@@ -1,0 +1,9 @@
+.item {
+  display: flex;
+  width: 320px;
+  justify-content: space-between;
+  background: antiquewhite;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
