@@ -1,12 +1,19 @@
 import {loadingReducer} from './loadingReducer'
-import {combineReducers, createStore} from "redux";
+import {combineReducers, compose, createStore} from "redux";
+import {themeReducer} from "../../h12/bll/themeReducer";
 
 const reducers = combineReducers({
   loading: loadingReducer,
-
+  theme: themeReducer
 })
 
-const store = createStore(reducers)
+declare global {
+  interface Window {
+    __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
+  }
+}
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducers, composeEnhancers());
 
 export default store
 
