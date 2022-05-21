@@ -36,7 +36,13 @@
   border-radius: 5px;
   cursor: pointer;
 }
+.user.dark {
+  background: #8b8b8b;
+}
 .user:hover {
   background: #ececec;
   transition: .3s;
+}
+.user.dark:hover {
+  background: #525252;
 }

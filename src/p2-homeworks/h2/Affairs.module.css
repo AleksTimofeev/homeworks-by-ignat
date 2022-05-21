@@ -25,6 +25,9 @@
   padding: .6rem;
   margin: .3rem;
 }
+.affairsItem.dark {
+  color: black;
+}
 .highPriority {
   background: #e92d2d;
 }
@@ -33,4 +36,13 @@
 }
 .lowPriority {
   background: bisque;
+}
+.highPriority.dark {
+background: #d86464;
+}
+.middlePriority.dark {
+background: #f29978;
+}
+.lowPriority.dark {
+  background: #ddcbb4;
 }

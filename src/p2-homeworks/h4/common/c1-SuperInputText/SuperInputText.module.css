@@ -2,15 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  /*padding: .3rem 1rem;*/
-  /*width: 100%;*/
 }
-
-.superInput {
-
-}
-
-
 .inputStyle {
   border: 1px solid transparent;
   background: white;
@@ -20,21 +12,27 @@
   padding: .3rem;
   transition: .3s;
 }
-
 .inputStyle:focus-visible {
   outline: none;
   box-shadow: 0 1px 7px 3px #c6c1c1;
   transition: .3s;
 }
-.blue {
+.inputStyle.dark:focus-visible {
+  box-shadow: 0 1px 7px 3px #4e4e4e;
+}
+.inputStyle.dark {
+  background: #a6a6a6;
+  box-shadow: 4px 4px 4px 0 #4e4e4e;
+}
+.blue, .blue.dark {
   background: #757cff;
-  color: #373737;
+  color: black;
   box-shadow: 3px 3px 9px -1px #717171
 }
 .blue:focus-visible {
    box-shadow: 0 1px 7px 3px #c6c1c1;
  }
-.green {
+.green, .green.dark {
   background: green;
   color: white;
   box-shadow: 4px 4px 7px -1px #447e53;
@@ -48,7 +46,6 @@
   border: 1px solid red;
   color: red;
 }
-
 .error {
   position: absolute;
   font-size: 1.2em;

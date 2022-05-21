@@ -4,25 +4,24 @@ import {useDispatch, useSelector} from "react-redux";
 import { AppStoreType } from "../h10/bll/store";
 import {changeThemeC} from "./bll/themeReducer";
 
-function HW12() {
+
+const HW12 = () => {
   const themes = useSelector((state: AppStoreType) => state.theme.themes)
+  const theme = useSelector((state: AppStoreType) => state.theme.theme)
   const dispatch = useDispatch()
 
-  const handleChange = (value: 'light' | 'dark' | 'red') => {
+  const handleChange = (value: 'light' | 'dark') => {
     dispatch(changeThemeC(value))
   }
 
     return (
         <div>
-            <hr/>
-            <span>
-                homeworks 12
-            </span>
+          <span>Theme </span>
           <SuperSelect
+            value={theme}
             options={themes}
             onChangeOption={handleChange}
           />
-            <hr/>
         </div>
     );
 }

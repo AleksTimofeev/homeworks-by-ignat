@@ -2,6 +2,8 @@ import React from 'react';
 import {IdType, UserType} from "./HW3";
 import styles from './Greeting.module.css'
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import {useSelector} from "react-redux";
+import {AppStoreType} from "../h10/bll/store";
 
 type PropsType = {
   data: UserType
@@ -14,6 +16,7 @@ const User: React.FC<PropsType> = ({
                                      userClickHandler,
                                      removeUserCallback
                                    }) => {
+  const theme = useSelector((state: AppStoreType) => state.theme.theme)
   const dateDay = new Date(date).getDate() < 10 ? `0${new Date(date).getDate()}` : new Date(date).getDate()
   const month = new Date(date).getMonth() < 10 ? `0${new Date(date).getMonth()}` : new Date(date).getMonth()
   const hours = new Date(date).getHours() < 10 ? `0${new Date(date).getHours()}` : new Date(date).getHours()
@@ -21,7 +24,7 @@ const User: React.FC<PropsType> = ({
   const dateOfCreation = `${dateDay}.${month}.${new Date(date).getFullYear()} ${hours}:${Minutes}`
 
   return (
-    <li className={styles.user} onClick={userClickHandler}>
+    <li className={`${styles.user} ${styles[theme]}`} onClick={userClickHandler}>
       <span title={`created ${dateOfCreation}`}>{name}</span>
       {/*<button onClick={()=>removeUserCallback(_id)}>delete</button>*/}
       <SuperButton red={true} onClick={()=> {

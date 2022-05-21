@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import {homeWorkReducer, State} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import styles from './HW8.module.css'
+import {useSelector} from "react-redux";
+import {AppStoreType} from "../h10/bll/store";
 
 // export type UserType =
 
@@ -15,14 +17,12 @@ const initialPeople = [
 ]
 
 function HW8() {
-  const [people, setPeople] = useState<State>(initialPeople) // need to fix any
-
-  // need to fix any
+  const [people, setPeople] = useState<State>(initialPeople)
+  const theme = useSelector((state: AppStoreType) => state.theme.theme)
   const finalPeople = people && people.map((p: any) => (
-    <div className={styles.item} key={p._id}>
+    <div className={`${styles.item} ${styles[theme]}`} key={p._id}>
       <span>{p.name}</span>
       <span>{p.age}</span>
-      {/*some name, age*/}
     </div>
   ))
 

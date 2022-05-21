@@ -7,3 +7,6 @@
   padding: 5px;
   margin-bottom: 5px;
 }
+.item.dark {
+  background: #8b8b8b;
+}

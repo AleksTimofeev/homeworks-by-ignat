@@ -3,7 +3,9 @@
   box-shadow: 0 0 10px 5px #aeaeae;
   padding: 0 20px;
 }
-
+.container.dark {
+  box-shadow: 0 0 10px 5px #575757;
+}
 .header {
   position: relative;
   display: flex;
@@ -43,6 +45,7 @@
 }
 
 .menu {
+  margin-right: auto;
   font-size: 1.2em;
   cursor: pointer;
 }

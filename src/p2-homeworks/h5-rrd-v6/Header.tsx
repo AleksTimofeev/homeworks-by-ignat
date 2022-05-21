@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {NavLink} from 'react-router-dom'
 import {PATH} from "./Pages";
 import styles from './HW5.module.css'
+import HW12 from "../h12/HW12";
 
 function Header() {
 
@@ -29,6 +30,7 @@ function Header() {
       <div
         onClick={() => setShowMenu(!showMenu)}
         className={styles.menu}>Nav</div>
+      <HW12 />
     </div>
   )
 }

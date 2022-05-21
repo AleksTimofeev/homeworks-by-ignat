@@ -1,12 +1,12 @@
 type ThemeReducerType = {
-  theme: 'light' | 'dark' | 'red'
+  theme: 'light' | 'dark'
   themes: Array<string>
 }
 type ActionsType = ReturnType<typeof changeThemeC>
 
 const initState: ThemeReducerType = {
   theme: 'light',
-  themes: ['light', 'dark', 'red']
+  themes: ['light', 'dark']
 };
 
 export const themeReducer = (state = initState, action: ActionsType): ThemeReducerType => {
@@ -17,6 +17,6 @@ export const themeReducer = (state = initState, action: ActionsType): ThemeReduc
   }
 };
 
-export const changeThemeC = (value: 'light' | 'dark' | 'red') => (
+export const changeThemeC = (value: 'light' | 'dark') => (
   {type: 'CHANGE_THEME', value} as const
 )

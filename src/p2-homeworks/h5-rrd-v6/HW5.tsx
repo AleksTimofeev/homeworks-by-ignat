@@ -3,10 +3,13 @@ import Header from './Header'
 import Pages from './Pages'
 import {HashRouter} from "react-router-dom";
 import styles from './HW5.module.css'
+import {useSelector} from "react-redux";
+import {AppStoreType} from "../h10/bll/store";
 
 function HW5() {
+  const theme = useSelector((state: AppStoreType) => state.theme.theme)
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} ${styles[theme]}`}>
             {/*в gh-pages лучше работает HashRouter*/}
             <HashRouter>
 
